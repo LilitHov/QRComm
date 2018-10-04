@@ -1,0 +1,54 @@
+//display
+@import "variables";
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-wrap() {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin space-between() {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin align-center() {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+//flex end
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//font face
+@mixin font-face($font-face-name, $font-name, $font-style:normal, $font-weight:normal) {
+  $file-path: $fonts-folder +'/'+ $font-name;
+  @font-face {
+    font-family: $font-face-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url($file-path + ".eot");
+    src: url($file-path + ".eot?#iefix") format('embedded-opentype'),
+    url($file-path + ".woff") format('woff'),
+    url($file-path + ".ttf") format('truetype'),
+  }
+}

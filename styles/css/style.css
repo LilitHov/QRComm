@@ -1,4 +1,90 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "OpenSans Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/openSans/opensans-regular/opensans-regular.eot");
+  src: url("../../fonts/openSans/opensans-regular/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/openSans/opensans-regular/opensans-regular.woff") format("woff"), url("../../fonts/openSans/opensans-regular/opensans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/openSans/opensans-bold/opensans-bold.eot");
+  src: url("../../fonts/openSans/opensans-bold/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/openSans/opensans-bold/opensans-bold.woff") format("woff"), url("../../fonts/openSans/opensans-bold/opensans-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/openSans/opensans-extrabold/opensans-extrabold.eot");
+  src: url("../../fonts/openSans/opensans-extrabold/opensans-extrabold.eot?#iefix") format("embedded-opentype"), url("../../fonts/openSans/opensans-extrabold/opensans-extrabold.woff") format("woff"), url("../../fonts/openSans/opensans-extrabold/opensans-extrabold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/openSans/opensans-semibold/opensans-semibold.eot");
+  src: url("../../fonts/openSans/opensans-semibold/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../../fonts/openSans/opensans-semibold/opensans-semibold.woff") format("woff"), url("../../fonts/openSans/opensans-semibold/opensans-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../../fonts/icomoon/icomoon.eot?egvllg");
+  src: url("../../fonts/icomoon/icomoon.eot?egvllg#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?egvllg") format("truetype"), url("../../fonts/icomoon/icomoon.woff?egvllg") format("woff"), url("../../fonts/icomoon/icomoon.svg?egvllg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-circular-outlined-button-1:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-pen:before {
+  content: "";
+}
+
+.icon-cancel:before {
+  content: "";
+}
+
+.gradient-border-bottom {
+  position: relative;
+}
+.gradient-border-bottom:after {
+  content: "";
+  background-image: -moz-linear-gradient(0deg, #1ec2da 0%, #1f85d1 47%, #1f48c8 100%);
+  background-image: -webkit-linear-gradient(0deg, #1ec2da 0%, #1f85d1 47%, #1f48c8 100%);
+  background-image: -ms-linear-gradient(0deg, #1ec2da 0%, #1f85d1 47%, #1f48c8 100%);
+  box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.rounded-box-with-shadow {
+  border-radius: 6px;
+  box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -40,41 +126,66 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "icomoon";
-  src: url("../../fonts/icomoon.eot?vz2fdm");
-  src: url("../../fonts/icomoon.eot?vz2fdm#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?vz2fdm") format("truetype"), url("../../fonts/icomoon.woff?vz2fdm") format("woff"), url("../../fonts/icomoon.svg?vz2fdm#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.icon-add-circular-outlined-button-1:before {
-  content: "";
+.text-center {
+  text-align: center;
 }
 
-.icon-Asset-1:before {
-  content: "";
+.btn {
+  border-radius: 6px;
+  font-family: "OpenSans Bold";
+  text-transform: uppercase;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.35);
+  text-align: center;
+  cursor: pointer;
+  height: 45px;
+  width: 100%;
+  white-space: nowrap;
+  transition: all 0.6s ease-in-out;
+  font-size: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
-
-.icon-Asset-2:before {
-  content: "";
+.btn.filled {
+  background: #1f74ce;
+  border: none;
+  color: #ffffff;
+  line-height: 45px;
 }
-
-.icon-frerer:before {
-  content: "";
+.btn.filled:hover {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.6);
+}
+.btn.outline {
+  background: none;
+  border: 1px solid #1f74ce;
+  color: #1f74ce;
+  line-height: 43px;
+}
+.btn.outline:hover {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.6);
+}
+.btn.link {
+  background: #ffffff;
+  color: #1f74ce;
+  border: none;
+  line-height: 45px;
+}
+.btn.link:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+.btn.disable {
+  cursor: no-drop;
+}
+.btn.w-sm {
+  max-width: 217px;
+}
+.btn.w-md {
+  max-width: 337px;
 }
 
 /*# sourceMappingURL=style.css.map */

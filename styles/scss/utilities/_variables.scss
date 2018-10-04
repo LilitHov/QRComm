@@ -1,3 +1,35 @@
-//fonts paths
-$icons-path : '../../fonts/icomoon';
-$fonts-path : '../../fonts/openSans';
+//fonts path
+$fonts-folder : '../../fonts';
+
+
+//icomoon
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../../fonts/icomoon" !default;
+
+$icon-add-circular-outlined-button-1: "\e900";
+$icon-check: "\e901";
+$icon-pen: "\e902";
+$icon-cancel: "\e903";
+
+
+//font-families
+
+$font-primary : 'OpenSans SemiBold';
+$font-secondary : 'OpenSans Regular';
+$font-bold : 'OpenSans Bold';
+$font-extraBold : 'OpenSans ExtraBold';
+
+
+//font-sizes
+$font-size-primary: 16px;
+$font-size-xs: 12px;
+$font-size-sm: 18px;
+
+//colors
+$color-primary : #1f74ce;
+$color-secondary: #666668;
+
+
+//transitions
+$transition: all .6s ease-in-out;
+

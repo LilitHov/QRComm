@@ -1,0 +1,23 @@
+.gradient-border-bottom {
+  position: relative;
+
+  &:after {
+    content: '';
+    background-image: -moz-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+    box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.rounded-box-with-shadow {
+    border-radius: 6px;
+    box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+
