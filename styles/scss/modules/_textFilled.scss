@@ -1,0 +1,120 @@
+.floating-form {
+  display: block;
+  position: relative;
+  margin: 100px;
+}
+
+.text-field {
+
+  input {
+  }
+
+  .error-mg {
+
+  }
+}
+
+
+
+
+
+.underlined-input {
+  font-size: $font-size-base;
+  font-family: $font-primary;
+  color: $color-secondary;
+  width:100%;
+  height: 50px;
+  line-height: 49px;
+  background-color: transparent;
+  border:none;
+  border-bottom: 1px solid $input-border-color;
+  padding: 0 3px;
+
+  &:focus {
+    outline:none;
+    line-height: 48px;
+    border-bottom:2px solid $form-focus;
+    color: $form-focus;
+  }
+
+  &.w-sm {
+    max-width: 337px;
+  }
+
+  &.w-md {
+    max-width: 375px;
+  }
+
+  &.floating:focus ~ label, &.floating:valid ~ label{
+      top: -18px;
+      font-size: 14px;
+      color: $label-color-focus;
+      transition: $transition;
+  }
+
+  &.border-light {
+    border-color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.5);
+
+    &:focus {
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+  }
+}
+
+label {
+  color: $label-color;
+  pointer-events:none;
+  transition: $transition;
+
+  &.floating {
+    position:absolute;
+    left:5px;
+    top:15px;
+    transition: $transition;
+  }
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: $form-focus;
+  background: none;
+  border: 1px solid #b7b7b7;
+  padding: 18px;
+  border-radius: 4px;
+  height: 140px;
+  width: 100%;
+
+  &:focus {
+    border-color: $form-focus;
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-secondary;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color-secondary;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color-secondary;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-secondary;
+  }
+}
+
+
+//.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+//  top:-18px;
+//  font-size:14px;
+//  color:#5264AE;
+//}
+

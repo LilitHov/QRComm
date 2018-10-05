@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?egvllg');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?egvllg#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?egvllg') format('truetype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?egvllg') format('woff'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?egvllg##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yw7zt');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yw7zt#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9yw7zt') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9yw7zt') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9yw7zt##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,22 +28,22 @@
 
 .icon-add-circular-outlined-button-1 {
   &:before {
-    content: $icon-add-circular-outlined-button-1;
+    content: $icon-add-circular-outlined-button-1; 
   }
 }
 .icon-check {
   &:before {
-    content: $icon-check;
+    content: $icon-check; 
   }
 }
 .icon-pen {
   &:before {
-    content: $icon-pen;
+    content: $icon-pen; 
   }
 }
 .icon-cancel {
   &:before {
-    content: $icon-cancel;
+    content: $icon-cancel; 
   }
 }
 

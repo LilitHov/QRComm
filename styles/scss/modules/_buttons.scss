@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 6px;
+  border-radius: $radius-sm;
   font-family: $font-bold;
   text-transform: uppercase;
   box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.35);
@@ -9,7 +9,7 @@
   width: 100%;
   white-space: nowrap;
   transition: $transition;
-  font-size: $font-size-primary;
+  font-size: $font-size-base;
   padding-right: 15px;
   padding-left: 15px;
 
@@ -47,7 +47,10 @@
   }
 
   &.disable {
-    cursor: no-drop;
+    pointer-events: none;
+    cursor: not-allowed;
+    background: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.5);
   }
 
   &.w-sm {
@@ -58,5 +61,3 @@
    max-width: 337px;
   }
 }
-
-

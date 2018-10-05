@@ -1,35 +1,43 @@
 //fonts path
-$fonts-folder : '../../fonts';
+$fonts-folder: '../../fonts';
 
-
-//icomoon
-$icomoon-font-family: "icomoon" !default;
-$icomoon-font-path: "../../fonts/icomoon" !default;
-
-$icon-add-circular-outlined-button-1: "\e900";
-$icon-check: "\e901";
-$icon-pen: "\e902";
-$icon-cancel: "\e903";
 
 
 //font-families
-
-$font-primary : 'OpenSans SemiBold';
-$font-secondary : 'OpenSans Regular';
-$font-bold : 'OpenSans Bold';
-$font-extraBold : 'OpenSans ExtraBold';
-
+$font-primary: 'OpenSans SemiBold';
+$font-secondary: 'OpenSans Regular';
+$font-bold: 'OpenSans Bold';
+$font-extraBold: 'OpenSans ExtraBold';
 
 //font-sizes
-$font-size-primary: 16px;
 $font-size-xs: 12px;
-$font-size-sm: 18px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+
+// base font size
+
+$font-size-base: $font-size-md;
+
 
 //colors
-$color-primary : #1f74ce;
+$color-primary: #1f74ce;
 $color-secondary: #666668;
+$color-blue: #1f88d2;
+
+
+//form colors
+$input-color: #747474;
+$input-border-color: #e0dfdf;
+$area-border-color: #b7b7b7;
+$label-color: #b7b7b7;
+$label-color-focus: rgba(42,42,42,0.8);
+$form-focus: #2a2a2a;
 
 
 //transitions
 $transition: all .6s ease-in-out;
+
+
+//radiuses
+$radius-sm: 6px;
 

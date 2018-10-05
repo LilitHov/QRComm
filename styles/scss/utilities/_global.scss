@@ -1,3 +1,23 @@
+@import "variables";
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+  font-size: $font-size-base;
+  font-family: $font-primary !important;
+  color: $color-secondary;
+}
+
+
+//.container {
+//  @include push-auto;
+//  max-width: 1950px;
+//  padding-right: 15px;
+//  padding-left: 15px;
+//
+//}
+
+
 .gradient-border-bottom {
   position: relative;
 
@@ -16,8 +36,20 @@
 }
 
 .rounded-box-with-shadow {
-    border-radius: 6px;
+    border-radius: $radius-sm;
     box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
+.links {
 
+  li {
+    a {
+      color: rgba(42,42,42, 0.8);
+    }
+
+    &.active {
+      color: $color-blue;
+      background: #def2ff;
+    }
+  }
+}
