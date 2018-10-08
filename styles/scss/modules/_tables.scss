@@ -1,0 +1,27 @@
+table, td , th {
+  border: 1px solid #ebebeb;
+  font-family: $font-secondary;
+
+  thead {
+    background: #f7f7f7;
+    color: rgba(#212121,0.5);
+
+  }
+
+  tbody {
+    font-size: $font-size-sm;
+    color: #2a2a2a;
+
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+      font-size: $font-size-sm;
+      font-family: $font-primary;
+      transition: $transition;
+
+      &:hover {
+        color: lighten($color-primary, 90%);
+      }
+    }
+  }
+}
