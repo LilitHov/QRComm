@@ -1,8 +1,6 @@
 //fonts path
 $fonts-folder: '../../fonts';
 
-
-
 //font-families
 $font-primary: 'OpenSans SemiBold';
 $font-secondary: 'OpenSans Regular';
@@ -18,26 +16,40 @@ $font-size-lg: 18px;
 
 $font-size-base: $font-size-md;
 
+//headings
 
 //colors
 $color-primary: #1f74ce;
 $color-secondary: #666668;
 $color-blue: #1f88d2;
 
-
 //form colors
 $input-color: #747474;
 $input-border-color: #e0dfdf;
 $area-border-color: #b7b7b7;
 $label-color: #b7b7b7;
-$label-color-focus: rgba(42,42,42,0.8);
+$label-color-focus: rgba(42, 42, 42, 0.8);
 $form-focus: #2a2a2a;
-
 
 //transitions
 $transition: all .6s ease-in-out;
 
-
 //radiuses
 $radius-sm: 6px;
 
+//heading font sizes
+$h-xs: 14px;
+$h-sm: 16px;
+$h-md: 18px;
+$h-lg: 20px;
+$h-xl: 22px;
+$h-xxl: 30px;
+
+$heading-font-sizes: (
+        h6:$h-xs,
+        h5:$h-sm,
+        h4:$h-md,
+        h3:$h-lg,
+        h2:$h-xl,
+        h1:$h-xxl
+);

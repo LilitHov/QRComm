@@ -5,3 +5,15 @@
 .link-underline {
   border-bottom: 1px solid #5696da;
 }
+
+.error-msg {
+  color: red;
+  font-size: $font-size-xs;
+  font-family: $font-secondary;
+}
+
+@each $key, $value in $heading-font-sizes {
+  #{$key} {
+    font-size: $value;
+  }
+}

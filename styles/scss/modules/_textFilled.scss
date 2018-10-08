@@ -1,24 +1,25 @@
-.floating-form {
-  display: block;
+.form-group {
   position: relative;
-  margin: 100px;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
-.text-field {
+.form-label {
+  color: $label-color;
+  pointer-events:none;
+  transition: $transition;
+  position:absolute;
+  left:5px;
+  top:15px;
 
-  input {
-  }
-
-  .error-mg {
-
+  &.floating {
+    top: -18px;
+    font-size: 14px;
+    color: $label-color-focus;
   }
 }
 
-
-
-
-
-.underlined-input {
+.form-input {
   font-size: $font-size-base;
   font-family: $font-primary;
   color: $color-secondary;
@@ -45,7 +46,7 @@
     max-width: 375px;
   }
 
-  &.floating:focus ~ label, &.floating:valid ~ label{
+  &.floating:focus ~ label {
       top: -18px;
       font-size: 14px;
       color: $label-color-focus;
@@ -63,20 +64,7 @@
   }
 }
 
-label {
-  color: $label-color;
-  pointer-events:none;
-  transition: $transition;
-
-  &.floating {
-    position:absolute;
-    left:5px;
-    top:15px;
-    transition: $transition;
-  }
-}
-
-textarea {
+.form-textarea {
   overflow: hidden;
   resize: none;
   font-family: $font-primary;
@@ -110,11 +98,4 @@ textarea {
     color: $color-secondary;
   }
 }
-
-
-//.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
-//  top:-18px;
-//  font-size:14px;
-//  color:#5264AE;
-//}
 
