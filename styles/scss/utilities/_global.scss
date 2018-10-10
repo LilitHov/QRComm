@@ -10,7 +10,8 @@ body {
 
 .container {
   @include push-auto;
-  max-width: 1326px;
+  max-width: 1330px;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -31,14 +32,18 @@ body {
   @include align-center
 }
 
+.content-center {
+  @include content-center;
+}
+
 .gradient-border-bottom {
   position: relative;
 
   &:after {
     content: '';
-    background-image: -moz-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
-    background-image: -webkit-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
-    background-image: -ms-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+    background-image: -moz-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
     box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
     height: 2px;
     position: absolute;
@@ -49,15 +54,15 @@ body {
 }
 
 .rounded-box-with-shadow {
-    border-radius: $radius-sm;
-    box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: $radius-sm;
+  box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
 .links {
 
   li {
     a {
-      color: rgba(42,42,42, 0.8);
+      color: rgba(42, 42, 42, 0.8);
     }
 
     &.active {

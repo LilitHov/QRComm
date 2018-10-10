@@ -1,27 +1,98 @@
-table, td , th {
-  border: 1px solid #ebebeb;
+.table {
+  table-layout: fixed;
   font-family: $font-secondary;
+  width: 100%;
+  z-index: 1;
 
-  thead {
-    background: #f7f7f7;
-    color: rgba(#212121,0.5);
-
+  th, td {
+    border: 1px solid #ebebeb;
+    padding: 25px 25px 25px 30px;
   }
+}
 
-  tbody {
-    font-size: $font-size-sm;
-    color: #2a2a2a;
+caption {
+
+  .table-caption {
+    @include flex;
+    @include space-between;
+    padding: 40px 25px 40px 35px;
+    font-size: $font-size-lg;
+
+    .title {
+      font-family: $font-extraBold;
+      text-transform: uppercase;
+    }
 
     a {
       color: $color-primary;
-      text-decoration: underline;
-      font-size: $font-size-sm;
-      font-family: $font-primary;
+      font-family: $font-bold;
       transition: $transition;
 
       &:hover {
-        color: lighten($color-primary, 90%);
+        color: lighten($color-primary, 20%);
+      }
+
+      i {
+        font-weight: 900;
       }
     }
+  }
+}
+
+thead {
+  background: #f7f7f7;
+  color: rgba(#212121, 0.5);
+  text-align: center;
+}
+
+tbody {
+  font-size: $font-size-sm;
+  color: #2a2a2a;
+
+  td {
+    position: relative;
+
+    .tooltip {
+      @include ellipsis;
+
+      a {
+        color: $color-primary;
+        text-decoration: underline;
+        font-size: $font-size-sm;
+        font-family: $font-primary;
+        transition: $transition;
+
+        &:hover {
+          color: lighten($color-primary, 20%);
+        }
+      }
+    }
+
+    .tooltip-text {
+      background: #000000;
+      font-family: $font-secondary;
+      color: white;
+      width: 80%;
+      border-radius: $radius-sm;
+      padding: 10px;
+      opacity: 0;
+      position: absolute;
+      transition: $transition;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      text-align: center;
+
+      &:after {
+        content: '';
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 7px solid transparent;
+        border-top: 7px solid black;
+        position: absolute;
+      }
+    }
+
   }
 }

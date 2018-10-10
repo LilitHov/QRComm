@@ -1,16 +1,43 @@
 .sign-in {
-    @include flex;
-    @include align-center;
-    min-height: 100vh;
-    background-image: -moz-linear-gradient( -45deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
-    background-image: -webkit-linear-gradient( -45deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
-    background-image: -ms-linear-gradient( -45deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+  @include flex;
+  @include align-center;
+  min-height: 100vh;
+  background-image: -moz-linear-gradient(-45deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+  background-image: -webkit-linear-gradient(-45deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+  background-image: -ms-linear-gradient(-45deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
 
-    .logo {
-        max-width: 320px;
+  .logo {
+    max-width: 635px;
+    padding-right: 80px;
+    width: 50%;
 
-        img {
-            width: 100%;
-        }
+    img {
+      max-width: 100%;
     }
+  }
+
+  .sign-in-form {
+    width: 50%;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 15px 0 60px 80px;
+
+    form {
+      width: 100%;
+      max-width: 335px;
+
+      .form-group {
+        margin-top: 50px;
+        margin-bottom: 45px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .sign-in-btn {
+        margin-top: 10px;
+      }
+    }
+  }
 }
+

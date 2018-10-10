@@ -13,15 +13,15 @@
   padding-right: 15px;
   padding-left: 15px;
 
+  &:hover {
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.6);
+  }
+
   &.filled {
     background: $color-primary;
     border: none;
     color: #ffffff;
     line-height: 45px;
-
-    &:hover {
-      box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.6);
-    }
   }
 
   &.outline {
@@ -29,10 +29,6 @@
     border: 1px solid $color-primary;
     color: $color-primary;
     line-height: 43px;
-
-    &:hover {
-      box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.6);
-    }
   }
 
   &.link {
@@ -40,16 +36,12 @@
     color: $color-primary;
     border: none;
     line-height: 45px;
-
-    &:hover {
-      background: rgba(0,0,0,0.08);
-    }
   }
 
   &.disable {
     pointer-events: none;
-    background: rgba(0,0,0,0.5);
-    color: rgba(255,255,255,0.5);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
 
   &.w-sm {
@@ -57,6 +49,12 @@
   }
 
   &.w-md {
-   max-width: 337px;
+    max-width: 335px;
+  }
+}
+
+@each $key, $value in $button-background {
+  .btn-#{$key} {
+    background: $value;
   }
 }

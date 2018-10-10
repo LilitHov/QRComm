@@ -22,6 +22,12 @@
   align-items: center;
 }
 
+@mixin content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 //flex end
 
 @mixin push-auto {

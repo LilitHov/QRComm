@@ -1,7 +1,5 @@
 .form-group {
   position: relative;
-  display: inline-flex;
-  flex-wrap: wrap;
 }
 
 .form-label {
@@ -17,6 +15,10 @@
     font-size: 14px;
     color: $label-color-focus;
   }
+
+  &.label-light {
+    color: rgba(255,255,255 , 0.5);
+  }
 }
 
 .form-input {
@@ -24,12 +26,12 @@
   font-family: $font-primary;
   color: $color-secondary;
   width:100%;
-  height: 50px;
+  height: 45px;
   line-height: 49px;
   background-color: transparent;
   border:none;
   border-bottom: 1px solid $input-border-color;
-  padding: 0 3px;
+  padding: 0 5px;
 
   &:focus {
     outline:none;
@@ -39,7 +41,7 @@
   }
 
   &.w-sm {
-    max-width: 337px;
+    max-width: 335px;
   }
 
   &.w-md {
@@ -51,6 +53,10 @@
       font-size: 14px;
       color: $label-color-focus;
       transition: $transition;
+
+    &.label-light {
+      color: #ffffff;
+    }
   }
 
   &.border-light {

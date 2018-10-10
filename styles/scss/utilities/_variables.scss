@@ -53,3 +53,39 @@ $heading-font-sizes: (
         h2:$h-xl,
         h1:$h-xxl
 );
+
+//button colors
+$bg-info: #17A2B8;
+$bg-danger: #DC3545;
+$bg-warning: #FFC107;
+$bg-success: #28A745;
+$bg-dark: #343A40;
+
+$button-background: (
+  info: $bg-info,
+  danger: $bg-danger,
+  warning: $bg-danger,
+  success: $bg-success,
+  dark: $bg-dark,
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
