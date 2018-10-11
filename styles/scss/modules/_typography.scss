@@ -15,5 +15,8 @@
 @each $key, $value in $heading-font-sizes {
   #{$key} {
     font-size: $value;
+    font-family: $font-extraBold;
+    text-transform: uppercase;
+    color: $color-secondary;
   }
 }

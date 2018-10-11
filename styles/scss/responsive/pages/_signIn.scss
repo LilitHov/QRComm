@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
   .sign-in {
 
-    .logo {
+    .signIn-logo {
       padding-right: 40px;
     }
 
@@ -18,7 +18,7 @@
       @include content-center;
       text-align: center;
 
-      .logo {
+      .signIn-logo {
         width: 100%;
         max-width: 450px;
         padding: 30px 0;
@@ -33,7 +33,4 @@
       }
     }
   }
-}
-
-@media (max-width: 420px) {
 }

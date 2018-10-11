@@ -5,6 +5,12 @@
   display: flex;
 }
 
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 @mixin flex-wrap() {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -61,4 +67,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+
+@mixin bg-img-props($position) {
+  background: no-repeat $position;
+  background-size: cover;
 }

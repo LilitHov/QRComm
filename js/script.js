@@ -20,20 +20,21 @@ for (var i = 0; i < input.length; i++) {
 
 // Tooltip
 
-var tooltip = document.querySelectorAll('.tooltip');
-console.log(tooltip);
+var tooltips = document.querySelectorAll('.tooltip');
+// console.log(tooltips);
 var text = '';
-for (var i = 0; i < tooltip.length; i++) {
-    tooltip[i].onmouseover = function () {
-        text = this.dataset.text;
-        if (text !== undefined) {
-           var tooltipText = this.nextElementSibling;
-            tooltipText.style.opacity = 1;
-            tooltipText.innerText = text;
-        }
-    };
+var tooltipsLength = tooltips.length;
+for (let i = 0; i < tooltipsLength; i++) {
+    var tooltipText = tooltips[i].nextElementSibling;
+    text = tooltips[i].dataset.text;
+    tooltipText.innerText = text;
+    if (text !== undefined) {
+        tooltips[i].onmouseover = function () {
+            tooltipText.classList.add('show');
+        };
 
-    tooltip[i].onmouseout = function () {
-        this.nextElementSibling.style.opacity = 0;
+        tooltips[i].onmouseout = function () {
+            tooltipText.classList.remove('show');
+        }
     }
 }
