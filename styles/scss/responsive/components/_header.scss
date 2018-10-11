@@ -3,7 +3,6 @@ header {
   background-image: -webkit-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
   background-image: -ms-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
   box-shadow: 0 2px 24px 0 rgba(38, 39, 38, 0.4);
-  margin-bottom: 45px;
 
   .header-content {
     @include flex;

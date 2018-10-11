@@ -12,6 +12,10 @@
   font-family: $font-secondary;
 }
 
+.ellipsis {
+  @include ellipsis;
+}
+
 @each $key, $value in $heading-font-sizes {
   #{$key} {
     font-size: $value;

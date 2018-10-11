@@ -36,8 +36,8 @@
   &:focus {
     outline:none;
     line-height: 48px;
-    border-bottom:2px solid $form-focus;
-    color: $form-focus;
+    border-bottom:2px solid $color-dark;
+    color: $color-dark;
   }
 
   &.w-sm {
@@ -75,7 +75,7 @@
   resize: none;
   font-family: $font-primary;
   font-size: $font-size-base;
-  color: $form-focus;
+  color: $color-dark;
   background: none;
   border: 1px solid #b7b7b7;
   padding: 18px;
@@ -84,7 +84,7 @@
   width: 100%;
 
   &:focus {
-    border-color: $form-focus;
+    border-color: $color-dark;
     outline: none;
   }
 
