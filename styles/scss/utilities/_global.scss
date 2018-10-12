@@ -37,6 +37,18 @@ body {
   @include content-center;
 }
 
+.content-end {
+  @include content-end;
+}
+
+.hide {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .border-bottom-primary {
   position: relative;
 
@@ -67,5 +79,28 @@ body {
   background: #ffffff;
 }
 
+.change-icons {
+
+  li {
+    width: 50%;
+    text-align: center;
+    padding: 10px 15px;
+    border-right: 1px solid #ebebeb;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      color: rgba(#212121, 0.5);
+      font-size: $font-size-md;
+      transition: $transition-xs;
+
+      &:hover {
+        color: #212121;
+      }
+    }
+  }
+}
 
 

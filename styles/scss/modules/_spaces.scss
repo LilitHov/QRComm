@@ -1,5 +1,5 @@
 //margin
-@for $i from 0 through 50 {
+@for $i from 0 through 60 {
   .mt-#{$i} {
     margin-top: #{$i}px;
   }
@@ -15,7 +15,7 @@
 }
 
 //padding
-@for $i from 0 through 50 {
+@for $i from 0 through 60 {
   .pt-#{$i} {
     padding-top: #{$i}px;
   }

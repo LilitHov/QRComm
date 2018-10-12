@@ -1,0 +1,15 @@
+.card-holder-form {
+  padding: 50px 60px 50px 30px;
+
+  form {
+    @include flex;
+    @include flex-wrap;
+    @include space-between;
+
+    .form-group {
+      width: 40%;
+      margin-bottom: 55px;
+    }
+  }
+
+}
