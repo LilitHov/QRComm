@@ -5,7 +5,7 @@ var input = document.querySelectorAll('.form-input');
 
 for (var i = 0; i < input.length; i++) {
     input[i].onblur = function () {
-        var label = this.parentElement.querySelector('.form-label');
+        let label = this.parentElement.querySelector('.label');
         if (this.value !== "") {
             label.classList.add('floating')
         } else {
@@ -13,3 +13,20 @@ for (var i = 0; i < input.length; i++) {
         }
     }
 }
+
+
+$(document).ready(function () {
+    // select2
+    $('.select2').select2({
+        minimumResultsForSearch: -1,
+        placeholder: false,
+    });
+
+    $('.select2').on('select2:selecting', function (e) {
+        let label = this.parentElement.querySelector('.label');
+        label.classList.add('floating');
+    });
+
+    // date picker
+    $('[data-toggle="datepicker"]').datepicker();
+});

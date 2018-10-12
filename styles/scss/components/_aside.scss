@@ -1,68 +1,63 @@
-.aside {
+aside {
   padding-top: 40px;
   padding-bottom: 20px;
 
   .title {
     padding-bottom: 35px;
-  }
 
-  .caption {
-    @include flex;
-    @include space-between;
+      a {
+        color: $color-primary;
+        font-family: $font-bold;
+        transition: $transition;
+        font-size: $font-size-lg;
 
-    a {
-      color: $color-primary;
-      font-family: $font-bold;
-      transition: $transition;
-      font-size: $font-size-lg;
+        &:hover {
+          color: lighten($color-primary, 20%);
+        }
 
-      &:hover {
-        color: lighten($color-primary, 20%);
-      }
-
-      i {
-        font-weight: 900;
+        i {
+          font-weight: 900;
+        }
       }
     }
-  }
 
-  &.sm {
-    min-width: 210px;
-    width: 19%;
-  }
+    &.sm {
+      min-width: 210px;
+      width: 19%;
+    }
 
-  &.md {
-    max-width: 1060px;
-    width: 81%;
-  }
+    &.md {
+      max-width: 1060px;
+      width: 81%;
+    }
 
-  &.aside-nav {
-    @include bg-img-props(bottom);
-    min-height: calc(100vh - 250px);
+    &.aside-nav {
+      @include bg-img-props(bottom);
+      min-height: calc(100vh - 250px);
 
-    .nav-link {
+      .nav-link {
 
-      li {
+        li {
 
-        a {
-          display: block;
-          padding: 20px 30px;
-          color: rgba(42, 42, 42, 0.8);
-          transition: $transition;
+          a {
+            display: block;
+            padding: 20px 30px;
+            color: rgba(42, 42, 42, 0.8);
+            transition: $transition;
 
-          &.active {
-            background: #def2ff;
-            color: $color-blue;
-          }
+            &.active {
+              background: #def2ff;
+              color: $color-blue;
+            }
 
-          &:hover {
-            background: rgba(#def2ff, 0.8);
-            color: $color-blue;
+            &:hover {
+              background: rgba(#def2ff, 0.8);
+              color: $color-blue;
+            }
           }
         }
       }
     }
-  }
 
-}
+  }
 
