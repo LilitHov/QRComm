@@ -56,7 +56,6 @@ tbody {
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        box-sizing: border-box;
         transition: $transition-xs;
         visibility: hidden;
         opacity: 0;
@@ -69,15 +68,14 @@ tbody {
           border: 8px solid transparent;
           border-top-color: black;
           position: absolute;
-          transition: $transition-xs;
           visibility: visible;
           opacity: 1;
         }
-      }
 
-      &:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
+        &.show {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }

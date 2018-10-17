@@ -1,0 +1,29 @@
+header {
+  background-image: -moz-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(30,194,218) 0%, rgb(31,133,209) 47%, rgb(31,72,200) 100%);
+  box-shadow: 0 2px 24px 0 rgba(38, 39, 38, 0.4);
+
+  .header-content {
+    @include flex;
+    @include align-center;
+    height: 95px;
+    line-height: 95px;
+
+    .logo {
+      display: inline-block;
+      height: 40px;
+      transition: $transition;
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

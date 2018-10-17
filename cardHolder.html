@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>List of location</title>
+    <title>Card holder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles/css/style.css">
@@ -18,14 +18,14 @@
         </div>
     </div>
 </header>
-<main class="pt-50 pb-50 border-bottom-primary">
+<main>
     <div class="container">
-        <div class="main-content flex">
-            <aside class="aside aside-nav sm mr-20 rounded-box-with-shadow"
+        <div class="main-cardholder pt-50 pb-50 flex">
+            <aside class="aside aside-nav left-sidebar mr-20 rounded-box-with-shadow"
                    style="background-image: url('images/aside-bg.png')">
                 <nav class="navbar">
-                    <h2 class="title text-center border-bottom-primary">Menu</h2>
-                    <ul class="nav-link">
+                    <h2 class="title">Menu</h2>
+                    <ul class="nav-link border-top-primary">
                         <li><a href="#">List of location</a></li>
                         <li><a href="#">Add a location</a></li>
                         <li><a href="#">List of card holders</a></li>
@@ -33,26 +33,23 @@
                     </ul>
                 </nav>
             </aside>
-            <aside class="aside md rounded-box-with-shadow bg-white">
-                <div class="title pl-30 pr-30 border-bottom-secondary">
-                    <h2 class="">Add a card holder</h2>
+            <aside class="aside right-sidebar rounded-box-with-shadow bg-white">
+                <div class="title border-bottom-secondary">
+                    <h2>Add a card holder</h2>
                 </div>
                 <div class="card-holder-form">
                     <form action="#">
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="fname" name="fname">
+                            <input type="text" class="form-input floating w-md" id="fname" name="fname" autocomplete="off">
                             <label for="fname" class="label">FName</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="lname" name="fname">
+                            <input type="text" class="form-input floating w-md" id="lname" name="fname" autocomplete="off">
                             <label for="lname" class="label">LName</label>
                         </div>
                         <div class="form-group">
                             <select name="company" class="select2 form-input floating">
                                 <option value=""></option>
-                                <option value="SXLX center">SXLX center</option>
-                                <option value="SXLX center">SXLX center</option>
-                                <option value="SXLX center">SXLX center</option>
                                 <option value="SXLX center">SXLX center</option>
                                 <option value="SXLX center">SXLX center</option>
                                 <option value="SXLX center">SXLX center</option>
@@ -83,50 +80,42 @@
                                       placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="num" name="num">
+                            <input type="text" class="form-input floating w-md" id="num" name="num" autocomplete="off">
                             <label for="lname" class="label">Udfnum</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="num1" name="numFirst1">
+                            <input type="text" class="form-input floating w-md" id="num1" name="numFirst1" autocomplete="off">
                             <label for="lname" class="label">Udfnum</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="Udftext" name="Udftext">
+                            <input type="text" class="form-input floating w-md" id="Udftext" name="Udftext" autocomplete="off">
                             <label for="lname" class="label">Udftext</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="Udftext1" name="Udftext1">
+                            <input type="text" class="form-input floating w-md" id="Udftext1" name="Udftext1" autocomplete="off">
                             <label for="lname" class="label">Udftext</label>
                         </div>
-                        <div class="file-upload mb-35">
+                        <div class="file-upload mb-40">
                             <label>Add Image
                                 <input class="hide" type="file">
                             </label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="code" name="code">
+                            <input type="text" class="form-input floating w-md" id="code" name="code" autocomplete="off">
                             <label for="code" class="label">Code</label>
                         </div>
-                        <div class="form-group">
-                            <select name="company" class="select2 form-input floating">
-                                <option value=""></option>
-                                <option value="startdate-1">StartDate-1</option>
-                                <option value="startdate-2">StartDate-2</option>
-                                <option value="startdate-3">StartDate-3</option>
-                            </select>
+                        <div class="form-group arrow-down">
+                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker" autocomplete="off">
+                            <div data-toggle="datepicker"></div>
                             <label class="label">StartDate</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="pin" name="pin">
+                            <input type="text" class="form-input floating w-md" id="pin" name="pin" autocomplete="off">
                             <label for="pin" class="label">Pin</label>
                         </div>
-                        <div class="form-group">
-                            <select name="company" class="select2 form-input floating">
-                                <option value=""></option>
-                                <option value="stopdate-1">StopDate-1</option>
-                                <option value="stopdate-2">StopDate-2</option>
-                                <option value="stopdate-3">StopDate-3</option>
-                            </select>
+                        <div class="form-group arrow-down">
+                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker" autocomplete="off">
+                            <div data-toggle="datepicker"></div>
                             <label class="label">StopDate</label>
                         </div>
                         <div class="form-group">
@@ -141,7 +130,7 @@
                             <label class="label">APB</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="cardnum" name="cardnum">
+                            <input type="text" class="form-input floating w-md" id="cardnum" name="cardnum" autocomplete="off">
                             <label for="cardnum" class="label">CardNum</label>
                         </div>
                         <div class="form-group">
@@ -154,7 +143,7 @@
                             <label class="label">AddAcl</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="numuses" name="numuses">
+                            <input type="text" class="form-input floating w-md" id="numuses" name="numuses" autocomplete="off">
                             <label for="numuses" class="label">NumUses</label>
                         </div>
                         <div class="full-width">

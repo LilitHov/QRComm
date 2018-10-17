@@ -75,8 +75,42 @@
   overflow: hidden;
 }
 
-
 @mixin bg-img-props($position) {
   background: no-repeat $position;
   background-size: cover;
+}
+
+@mixin arrow-down() {
+  z-index: 0;
+  position: relative;
+
+  &:after {
+    content: '\e901';
+    position: absolute;
+    font-family: icomoon;
+    color: $color-secondary;
+    right: 10px;
+    bottom: 20px;
+    font-size: 7px;
+    z-index: -1;
+  }
+}
+
+
+//border primary
+@mixin border-top-primary() {
+  position: relative;
+
+  &:after {
+    content: '';
+    background-image: -moz-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(30, 194, 218) 0%, rgb(31, 133, 209) 47%, rgb(31, 72, 200) 100%);
+    box-shadow: -1px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }

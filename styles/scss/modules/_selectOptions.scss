@@ -1,52 +1,40 @@
 .form-group {
 
   .select2.select2-container {
-    z-index: 0;
+    @include arrow-down;
+    width: 100% !important;
 
-    &:after {
-      content: '\e901';
-      position: absolute;
-      font-family: icomoon;
-      color: $color-secondary;
-      right: 10px;
-      bottom: 20px;
-      font-size: 7px;
-      z-index: -1;
-    }
+    .select2-selection {
+      width: 100%;
+      height: 50px;
+      line-height: 49px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $input-border-color;
+      padding: 0 5px;
+      border-radius: 0;
 
-      width: 100% !important;
+      &.select2-selection--single .select2-selection__rendered {
+        line-height: inherit;
+        color: $color-secondary;
+        padding-right: 0;
+        padding-left: 0;
+      }
 
-      .select2-selection {
-        width: 100%;
-        height: 50px;
-        line-height: 49px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid $input-border-color;
-        padding: 0 5px;
-        border-radius: 0;
+      &:focus {
+        outline: none;
+      }
 
-        &.select2-selection--single .select2-selection__rendered {
-          line-height: inherit;
-          color: $color-secondary;
-          padding-right: 0;
-          padding-left: 0;
-        }
-
-        &:focus {
-          outline: none;
-        }
-
-        .select2-selection__arrow {
-          display: none;
-        }
+      .select2-selection__arrow {
+        display: none;
       }
     }
+  }
 }
 
-  .select2-container--default  {
+.select2-container--default {
   .select2-results {
-    .select2-results__options li{
+    .select2-results__options li {
       &:first-child {
         padding: 0;
       }
@@ -60,7 +48,7 @@
     transition: $transition-xs;
 
     &:hover {
-      background: rgba( $color-primary , 0.8);
+      background: rgba($color-primary, 0.8);
     }
   }
 }

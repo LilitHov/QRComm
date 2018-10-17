@@ -1,8 +1,8 @@
 footer {
+  @include border-top-primary;
   background: #ffffff;
   height: 55px;
   line-height: 55px;
-
 
   .copyright {
     color: rgba(#212121, 0.5);

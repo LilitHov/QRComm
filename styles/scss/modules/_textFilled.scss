@@ -8,9 +8,10 @@
   position: absolute;
   left: 5px;
   top: 15px;
+  transition: $transition-xs;
+
 
   &.floating {
-    transition: $transition-xs;
     top: -18px;
     font-size: 14px;
     color: $label-color-focus;
@@ -46,17 +47,6 @@
 
   &.w-md {
     max-width: 375px;
-  }
-
-  &.floating:focus ~ label {
-    top: -18px;
-    font-size: 14px;
-    color: $label-color-focus;
-    transition: $transition;
-
-    &.label-light {
-      color: #ffffff;
-    }
   }
 
   &.border-light {
@@ -108,12 +98,14 @@
   width: 100%;
 
   label {
-    display: inline-block;
+    @include flex;
+    @include align-center;
+
     color: #4c90d8;
     width: 110px;
     height: 110px;
     border: 2px solid rgba(#1f74ce, 0.8);
-    line-height: 106px;
+    padding: 0 15px;
     text-align: center;
     cursor: pointer;
     transition: $transition;

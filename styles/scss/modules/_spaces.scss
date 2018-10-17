@@ -12,6 +12,9 @@
   .ml-#{$i} {
     margin-left: #{$i}px;
   }
+  .m-#{$i} {
+    margin:  #{$i}px;
+  }
 }
 
 //padding
@@ -27,5 +30,8 @@
   }
   .pl-#{$i} {
     padding-left: #{$i}px;
+  }
+  .p-#{$i} {
+    padding:  #{$i}px;
   }
 }

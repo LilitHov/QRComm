@@ -1,11 +1,15 @@
 aside {
-  padding-top: 40px;
   padding-bottom: 20px;
 
   .title {
-    padding-bottom: 35px;
+        @include flex;
+        @include align-center;
+        padding: 0 30px;
+        height: 90px;
 
       a {
+        @include flex;
+        @include align-center;
         color: $color-primary;
         font-family: $font-bold;
         transition: $transition;
@@ -16,19 +20,20 @@ aside {
         }
 
         i {
+          margin-right:15px;
           font-weight: 900;
+          font-size: 24px;
         }
       }
     }
 
-    &.sm {
-      min-width: 210px;
-      width: 19%;
+    &.left-sidebar {
+      max-width: 210px;
+      width: 100%;
     }
 
-    &.md {
-      max-width: 1060px;
-      width: 81%;
+    &.right-sidebar {
+      width: calc(100% - 230px);
     }
 
     &.aside-nav {
