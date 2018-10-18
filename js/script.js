@@ -3,7 +3,9 @@ $(document).ready(function () {
     $('.select2').select2({
         minimumResultsForSearch: -1,
         placeholder: false,
+
     });
+
 
     $('.select2').on('select2:selecting', function (e) {
         let label = this.parentElement.querySelector('.label');

@@ -3,18 +3,17 @@
 }
 
 .label {
-  color: $label-color;
+  color: $holder-color;
   pointer-events: none;
   position: absolute;
   left: 5px;
   top: 15px;
   transition: $transition-xs;
 
-
   &.floating {
     top: -18px;
     font-size: 14px;
-    color: $label-color-focus;
+    color: $holder-color-focus;
   }
 
   &.label-light {
@@ -61,60 +60,108 @@
 }
 
 .form-textarea {
-  resize: none;
-  font-family: $font-primary;
-  font-size: $font-size-base;
-  color: $color-dark;
-  padding: 18px;
-  line-height: 20px;
-  border-radius: $radius-xs;
-  min-height: 160px;
-  width: 100%;
-
-  &:focus {
-    border-color: $color-dark;
-    outline: none;
-  }
-
-  &::-webkit-input-placeholder {
-    color: $color-secondary;
-    font-family: $font-primary;
-  }
-
-  &:-moz-placeholder { /* Firefox 18- */
-    color: $color-secondary;
-  }
-
-  &::-moz-placeholder { /* Firefox 19+ */
-    color: $color-secondary;
-  }
-
-  &:-ms-input-placeholder {
-    color: $color-secondary;
-  }
-}
-
-.file-upload {
-  width: 100%;
 
   label {
-    @include flex;
-    @include align-center;
+    color: $holder-color;
+    pointer-events: none;
+  }
 
-    color: #4c90d8;
-    width: 110px;
-    height: 110px;
-    border: 2px solid rgba(#1f74ce, 0.8);
-    padding: 0 15px;
-    text-align: center;
-    cursor: pointer;
-    transition: $transition;
+  textarea {
+    margin-bottom: 60px;
+    margin-top: 15px;
+    resize: none;
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    color: $color-dark;
+    padding: 18px;
+    line-height: 20px;
+    border-radius: $radius-xs;
+    min-height: 160px;
+    width: 100%;
 
-    &:hover {
-      color: $font-primary;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+    &:focus {
+      border-color: $color-dark;
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #b7b7b7;
+      font-family: $font-primary;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #b7b7b7;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #b7b7b7;
+    }
+
+    &:-ms-input-placeholder {
+      color: #b7b7b7;
     }
   }
 }
 
+.file-upload {
+  margin: -10px;
 
+  li {
+    margin: 10px;
+
+    .file-label {
+      @include flex;
+      @include align-center;
+      @include flex-shrink(0);
+
+      color: #4c90d8;
+      width: 110px;
+      height: 110px;
+      border: 2px solid rgba(#1f74ce, 0.8);
+      padding: 0 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: $transition-xs;
+
+      &:hover {
+        color: $font-primary;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    &.user-photo {
+      @include bg-img-props(center);
+      width: 110px;
+      height: 110px;
+      position: relative;
+      transition: $transition-xs;
+
+     .overlay {
+       height: 100%;
+       background: rgba(black, 0.5);
+       visibility: hidden;
+       opacity: 0;
+
+       i{
+         color: white;
+         font-size: 14px;
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         cursor: pointer;
+         padding: 5px;
+         transition: $transition-sm;
+
+         &:hover {
+           transform: rotate(90deg);
+         }
+       }
+     }
+
+      &:hover .overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

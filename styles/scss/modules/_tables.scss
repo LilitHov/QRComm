@@ -3,16 +3,16 @@
   font-family: $font-secondary;
   width: 100%;
 
-  th, td {
-    border: 1px solid #ebebeb;
-    padding: 25px 10px;
-    text-align: center;
-  }
 }
 
 thead {
   background: #f7f7f7;
   color: rgba(#212121, 0.5);
+
+  th {
+    padding: 25px 10px;
+    border: 1px solid #ebebeb;
+  }
 }
 
 tbody {
@@ -20,6 +20,14 @@ tbody {
   color: #2a2a2a;
 
   td {
+    padding: 25px 25px 25px 30px;
+    border: 1px solid #ebebeb;
+
+
+    &:last-child {
+     padding: 25px 10px;
+      text-align: center;
+    }
 
     .tool {
       position: relative;
@@ -29,17 +37,17 @@ tbody {
         color: $color-dark;
         font-family: $font-secondary;
 
-      a {
-        color: $color-primary;
-        font-size: $font-size-sm;
-        font-family: $font-primary;
-        transition: $transition;
-        text-decoration: underline;
+        a {
+          color: $color-primary;
+          font-size: $font-size-sm;
+          font-family: $font-primary;
+          transition: $transition-xs;
+          text-decoration: underline;
 
-        &:hover {
-          color: lighten($color-primary, 20%);
+          &:hover {
+            color: lighten($color-primary, 20%);
+          }
         }
-       }
       }
 
       .tooltip-text {

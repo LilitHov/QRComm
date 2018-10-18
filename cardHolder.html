@@ -22,29 +22,31 @@
     <div class="container">
         <div class="main-cardholder pt-50 pb-50 flex">
             <aside class="aside aside-nav left-sidebar mr-20 rounded-box-with-shadow"
-                   style="background-image: url('images/aside-bg.png')">
+                   style="background-image: url('images/aside.png')">
                 <nav class="navbar">
                     <h2 class="title">Menu</h2>
                     <ul class="nav-link border-top-primary">
-                        <li><a href="#">List of location</a></li>
+                        <li><a href="location.html">List of location</a></li>
                         <li><a href="#">Add a location</a></li>
                         <li><a href="#">List of card holders</a></li>
                         <li><a href="#" class="active">Add a card holder</a></li>
                     </ul>
                 </nav>
             </aside>
-            <aside class="aside right-sidebar rounded-box-with-shadow bg-white">
+            <aside class="aside right-sidebar rounded-box-with-shadow">
                 <div class="title border-bottom-secondary">
                     <h2>Add a card holder</h2>
                 </div>
                 <div class="card-holder-form">
                     <form action="#">
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="fname" name="fname" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="fname" name="fname"
+                                   autocomplete="off">
                             <label for="fname" class="label">FName</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="lname" name="fname" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="lname" name="fname"
+                                   autocomplete="off">
                             <label for="lname" class="label">LName</label>
                         </div>
                         <div class="form-group">
@@ -74,38 +76,65 @@
                             </select>
                             <label class="label">Trace</label>
                         </div>
-                        <div class="full-width">
+                        <div class="full-width form-textarea">
                             <label for="holder-textarea1">Notes</label>
-                            <textarea class="form-textarea mb-60 mt-15" id="holder-textarea1"
-                                      placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo"></textarea>
+                            <textarea id="holder-textarea1"
+                                      placeholder="Lorem ipsum dolor sit amet..."></textarea>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-input floating w-md" id="num" name="num" autocomplete="off">
                             <label for="lname" class="label">Udfnum</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="num1" name="numFirst1" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="num1" name="numFirst1"
+                                   autocomplete="off">
                             <label for="lname" class="label">Udfnum</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="Udftext" name="Udftext" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="Udftext" name="Udftext"
+                                   autocomplete="off">
                             <label for="lname" class="label">Udftext</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="Udftext1" name="Udftext1" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="Udftext1" name="Udftext1"
+                                   autocomplete="off">
                             <label for="lname" class="label">Udftext</label>
                         </div>
-                        <div class="file-upload mb-40">
-                            <label>Add Image
-                                <input class="hide" type="file">
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="code" name="code" autocomplete="off">
+                            <ul class="file-upload flex flex-wrap">
+                                <li>
+                                    <label class="file-label">Add Image
+                                        <input class="hide" type="file">
+                                    </label>
+                                </li>
+                                <li style="background-image: url('images/user-1.jpg')" class="user-photo">
+                                    <div class="overlay">
+                                        <i class="icon-cancel"></i>
+                                    </div>
+                                </li>
+                                <li style="background-image: url('images/user-2.jpg')" class="user-photo">
+                                    <div class="overlay">
+                                        <i class="icon-cancel"></i>
+                                    </div>
+                                </li>
+                                <li style="background-image: url('images/user-3.jpg')" class="user-photo">
+                                    <div class="overlay">
+                                        <i class="icon-cancel"></i>
+                                    </div>
+                                </li>
+                                <li style="background-image: url('images/user-4.jpg')" class="user-photo">
+                                    <div class="overlay">
+                                        <i class="icon-cancel"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        <div class="form-group mt-55">
+                            <input type="text" class="form-input floating w-md" id="code" name="code"
+                                   autocomplete="off">
                             <label for="code" class="label">Code</label>
                         </div>
-                        <div class="form-group arrow-down">
-                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker" autocomplete="off">
+                        <div class="form-group arrow-down mt-55">
+                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker"
+                                   autocomplete="off">
                             <div data-toggle="datepicker"></div>
                             <label class="label">StartDate</label>
                         </div>
@@ -114,7 +143,8 @@
                             <label for="pin" class="label">Pin</label>
                         </div>
                         <div class="form-group arrow-down">
-                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker" autocomplete="off">
+                            <input type="text" class="form-input floating w-md date" data-toggle="datepicker"
+                                   autocomplete="off">
                             <div data-toggle="datepicker"></div>
                             <label class="label">StopDate</label>
                         </div>
@@ -130,7 +160,8 @@
                             <label class="label">APB</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="cardnum" name="cardnum" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="cardnum" name="cardnum"
+                                   autocomplete="off">
                             <label for="cardnum" class="label">CardNum</label>
                         </div>
                         <div class="form-group">
@@ -143,16 +174,17 @@
                             <label class="label">AddAcl</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input floating w-md" id="numuses" name="numuses" autocomplete="off">
+                            <input type="text" class="form-input floating w-md" id="numuses" name="numuses"
+                                   autocomplete="off">
                             <label for="numuses" class="label">NumUses</label>
                         </div>
-                        <div class="full-width">
+                        <div class="full-width form-textarea">
                             <label for="holder-textarea">Notes</label>
-                            <textarea class="form-textarea mb-60 mt-15" id="holder-textarea"
-                                      placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo"></textarea>
+                            <textarea id="holder-textarea"
+                                      placeholder="Lorem ipsum dolor sit amet..."></textarea>
                         </div>
                         <div class="flex full-width content-end">
-                            <button class="btn link w-sm">
+                            <button class="btn outline w-sm">
                                 Cancel
                             </button>
                             <button class="btn filled w-sm ml-30">
@@ -166,13 +198,10 @@
     </div>
 </main>
 
-
-
-
-<footer>
+<footer class="border-top-primary">
     <div class="container">
         <p class="copyright">
-            (c) DSX QR Code 20118
+            (c) DSX QR Code 2018
         </p>
     </div>
 </footer>

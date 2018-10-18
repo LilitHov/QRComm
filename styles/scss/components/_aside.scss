@@ -1,5 +1,6 @@
 aside {
   padding-bottom: 20px;
+  background-color: white;
 
   .title {
         @include flex;
@@ -12,7 +13,7 @@ aside {
         @include align-center;
         color: $color-primary;
         font-family: $font-bold;
-        transition: $transition;
+        transition: $transition-sm;
         font-size: $font-size-lg;
 
         &:hover {
@@ -28,8 +29,11 @@ aside {
     }
 
     &.left-sidebar {
-      max-width: 210px;
-      width: 100%;
+      width: 210px;
+
+      &.aside-nav {
+        min-height: 1000px;
+      }
     }
 
     &.right-sidebar {
@@ -48,7 +52,7 @@ aside {
             display: block;
             padding: 20px 30px;
             color: rgba(42, 42, 42, 0.8);
-            transition: $transition;
+            transition: $transition-sm;
 
             &.active {
               background: #def2ff;
