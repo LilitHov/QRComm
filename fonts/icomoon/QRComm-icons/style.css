@@ -1,11 +1,10 @@
-@import "variables";
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yw7zt');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yw7zt#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9yw7zt') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9yw7zt') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9yw7zt##{$icomoon-font-family}') format('svg');
+  font-family: 'QRComm-icons';
+  src:  url('fonts/QRComm-icons.eot?9c8xaj');
+  src:  url('fonts/QRComm-icons.eot?9c8xaj#iefix') format('embedded-opentype'),
+    url('fonts/QRComm-icons.ttf?9c8xaj') format('truetype'),
+    url('fonts/QRComm-icons.woff?9c8xaj') format('woff'),
+    url('fonts/QRComm-icons.svg?9c8xaj#QRComm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,4 +39,3 @@
 .icon-cancel:before {
   content: "\e903";
 }
-

@@ -1,0 +1,41 @@
+@media (max-width: 1200px) {
+  body {
+
+    &.layer {
+      transition: $transition-sm;
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(black, 0.5);
+      }
+    }
+  }
+  aside {
+    &.left-sidebar.aside-nav {
+      transform: translateX(-300px);
+      position: absolute;
+      z-index: 2;
+      min-height: calc(100vh - 287px);
+      background-position: center;
+      transition: $transition-xs;
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+
+    &.right-sidebar {
+      min-height: calc(100vh - 250px);
+      width: 100%;
+    }
+  }
+}

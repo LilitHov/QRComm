@@ -52,7 +52,7 @@ $(document).ready(function () {
         };
         // onblur
         date[i].onblur = function () {
-            if(!this.classList.contains('date')) {
+            if (!this.classList.contains('date')) {
                 if (this.value !== '') {
                     addFloating(this);
                 } else {
@@ -63,20 +63,44 @@ $(document).ready(function () {
     }
     // onhide
     $('[data-toggle="datepicker"]').on('hide.datepicker', function (e) {
-        if(this.value === "") {
+        if (this.value === "") {
             removeFloating(this);
         }
     });
+    // add floating class
+    function addFloating(e) {
+        let label = e.parentElement.querySelector('.label');
+        label.classList.add('floating');
+    }
+
+    //remove floating class
+    function removeFloating(e) {
+        let label = e.parentElement.querySelector('.label');
+        label.classList.remove('floating');
+    }
+
+    // hamburger
+    var leftAside = document.querySelectorAll('.left-sidebar')[0];
+    var body = document.getElementsByTagName('body')[0];
+    var close = document.querySelectorAll('.close')[0];
+    var hamburger = document.querySelectorAll('.hamburger')[0];
+
+    hamburger.onclick = function () {
+        hamburger.classList.add('hide');
+        body.classList.add('layer');
+        leftAside.classList.add('show');
+        close.classList.add('show');
+    };
+
+
+    close.onclick = function () {
+        hamburger.classList.remove('hide');
+        body.classList.remove('layer');
+        leftAside.classList.remove('show');
+        close.classList.remove('show');
+    }
+
+
+
 });
 
-// add floating class
-function addFloating(e) {
-    let label = e.parentElement.querySelector('.label');
-    label.classList.add('floating');
-}
-
-//remove floating class
-function removeFloating(e) {
-    let label = e.parentElement.querySelector('.label');
-    label.classList.remove('floating');
-}

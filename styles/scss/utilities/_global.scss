@@ -88,7 +88,6 @@ body {
   li {
     padding: 0 15px;
     position: relative;
-    //border-right: 1px solid #ebebeb;
 
     &:after {
       content: " ";
@@ -134,4 +133,40 @@ body {
 
 .arrow-down {
   @include arrow-down;
+}
+
+.hamburger, .close {
+  font-size: 22px;
+  transition: $transition-xs;
+  cursor: pointer;
+  padding: 5px;
+  display: none;
+  position: absolute;
+  top: 25px;
+}
+
+.hamburger {
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.close {
+  position: absolute;
+  z-index: 2;
+  color: white;
+
+  &:hover {
+    color: rgba(white, 0.8);
+  }
+
+  &.show {
+    display: inline-block;
+  }
 }

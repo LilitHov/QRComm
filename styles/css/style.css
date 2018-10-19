@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "OpenSans Regular";
   font-style: normal;
@@ -144,12 +143,37 @@ body {
   .arrow-down:after {
     content: '\e901';
     position: absolute;
-    font-family: icomoon;
+    font-family: QRComm-icons;
     color: #666668;
     right: 10px;
     bottom: 20px;
     font-size: 7px;
     z-index: -1; }
+
+.hamburger, .close {
+  font-size: 22px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 5px;
+  display: none;
+  position: absolute;
+  top: 25px; }
+
+.hamburger {
+  color: #666668; }
+  .hamburger:hover {
+    color: #1f74ce; }
+  .hamburger.hide {
+    display: none; }
+
+.close {
+  position: absolute;
+  z-index: 2;
+  color: white; }
+  .close:hover {
+    color: rgba(255, 255, 255, 0.8); }
+  .close.show {
+    display: inline-block; }
 
 * {
   box-sizing: border-box; }
@@ -191,16 +215,18 @@ a {
 button {
   border: none;
   background: none; }
+  button:focus {
+    outline: none; }
 
 @font-face {
-  font-family: "icomoon";
-  src: url("../../fonts/icomoon/icomoon.eot?9yw7zt");
-  src: url("../../fonts/icomoon/icomoon.eot?9yw7zt#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?9yw7zt") format("truetype"), url("../../fonts/icomoon/icomoon.woff?9yw7zt") format("woff"), url("../../fonts/icomoon/icomoon.svg?9yw7zt#icomoon") format("svg");
+  font-family: "QRComm-icons";
+  src: url("../../fonts/icomoon/QRComm-icons.eot?9yw7zt");
+  src: url("../../fonts/icomoon/QRComm-icons.eot?9yw7zt#iefix") format("embedded-opentype"), url("../../fonts/icomoon/QRComm-icons.ttf?9yw7zt") format("truetype"), url("../../fonts/icomoon/QRComm-icons.woff?9yw7zt") format("woff"), url("../../fonts/icomoon/QRComm-icons.svg?9yw7zt#QRComm-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'QRComm-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -211,17 +237,20 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-menu:before {
+  content: "\e904"; }
+
 .icon-add-circular-outlined-button-1:before {
-  content: ""; }
+  content: "\e900"; }
 
 .icon-check:before {
-  content: ""; }
+  content: "\e901"; }
 
 .icon-pen:before {
-  content: ""; }
+  content: "\e902"; }
 
 .icon-cancel:before {
-  content: ""; }
+  content: "\e903"; }
 
 .datepicker-container {
   background-color: #fff;
@@ -826,11 +855,12 @@ button {
 .form-group .select2.select2-container {
   z-index: 0;
   position: relative;
-  width: 100% !important; }
+  width: 100% !important;
+  max-width: 375px; }
   .form-group .select2.select2-container:after {
     content: '\e901';
     position: absolute;
-    font-family: icomoon;
+    font-family: QRComm-icons;
     color: #666668;
     right: 10px;
     bottom: 20px;
@@ -2987,7 +3017,7 @@ h1 {
   width: 11%; }
 
 .card-holder-form {
-  padding: 50px 60px 50px 30px; }
+  padding: 50px 30px; }
   .card-holder-form form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3088,6 +3118,37 @@ footer {
     font-size: 12px; }
 
 @media (max-width: 1200px) {
+  .hamburger {
+    display: inline-block; } }
+@media (max-width: 1200px) {
+  body.layer {
+    transition: all 0.4s ease-in-out;
+    overflow: hidden; }
+    body.layer:after {
+      content: "";
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); }
+
+  aside.left-sidebar.aside-nav {
+    transform: translateX(-300px);
+    position: absolute;
+    z-index: 2;
+    min-height: calc(100vh - 287px);
+    background-position: center;
+    transition: all 0.2s ease-in-out; }
+    aside.left-sidebar.aside-nav.show {
+      transform: translateX(0); }
+  aside.right-sidebar {
+    min-height: calc(100vh - 250px);
+    width: 100%; } }
+@media (max-width: 1200px) {
   .sign-in .signIn-logo {
     padding-right: 40px; }
   .sign-in .sign-in-form {
@@ -3112,5 +3173,19 @@ footer {
       width: 100%;
       border-left: none;
       padding: 50px 0 20px; } }
+@media (max-width: 1200px) {
+  .main-cardholder {
+    position: relative;
+    display: block;
+    padding-top: 85px; }
+    .main-cardholder aside.right-sidebar {
+      min-height: calc(100vh - 287px); } }
+@media (max-width: 1200px) {
+  .main-location {
+    position: relative;
+    display: block;
+    padding-top: 85px; }
+    .main-location aside.right-sidebar {
+      min-height: calc(100vh - 287px); } }
 
 /*# sourceMappingURL=style.css.map */

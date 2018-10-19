@@ -3,6 +3,7 @@
   .select2.select2-container {
     @include arrow-down;
     width: 100% !important;
+    max-width: 375px;
 
     .select2-selection {
       width: 100%;
